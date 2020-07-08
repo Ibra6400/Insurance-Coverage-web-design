@@ -1,0 +1,154 @@
+body{
+    background:url("images/1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+h1{
+    color: black;
+    margin-left: 100px;
+}
+
+p{
+    color: black;
+    padding-left: 10px;
+    font-size: 10pt;
+}
+#card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 70px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: white;
+    height: auto;
+    width: 400px;
+    padding: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius:25px;
+    
+}
+.company-logo{
+     height: 60px;
+     width: 500px;
+     border-top-left-radius: 25px;
+     border-top-right-radius:25px;
+     padding:0 0;
+     background: #CBA36D;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+     
+     
+}
+.crad-body{
+    background-color: white;
+    height: 280px;
+    width: 500px;
+    background-image: url(images/9.png);
+    background-repeat: no-repeat;
+  background-size: 50% 90%;
+  background-position: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ 
+}
+
+.footer{
+    background: #CBA36D;
+    height: 40px;
+    width: 500px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius:25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   text-align: left;
+}
+.logo-img{
+    width: 50%;
+    
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#footer .footer-text{
+    margin-right: 20px;
+}
+table { 
+	width: 650px; 
+	border-collapse: collapse; 
+	margin:30px 40px;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: white; 
+    }
+    tr:nth-of-type(even) { 
+        background:#eeeeee; 
+        }
+
+th { 
+	background: #CBA36D; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
